@@ -6,15 +6,32 @@ export default function TextForm(props) {
   //   console.log("UpperCase was clicked");
     let newText = text.toUpperCase();
     setText(newText)
-  }
+  } 
+
   const handleLowClick =()=>{
      let newText = text.toLowerCase();
      setText(newText)
   }
 
+  const handleClrClick = ()=>{
+    //   console.log("UpperCase was clicked");
+      let newText = '';
+      setText(newText)
+    }
+    const speak = () => {
+      let msg = new SpeechSynthesisUtterance();
+      msg.text = text;
+      window.speechSynthesis.speak(msg);
+    }    
+    const replacecasefunc = () => {
+      let existing_text = prompt("Enter which word to replace : ");
+      let replaced_text = prompt("Enter New Text");
+      setText(text.replaceAll(existing_text, replaced_text))
+    }
   const handleOnChange = (event)=>{
     setText(event.target.value);
   }
+
   
   const [text, setText] = useState('');
   return (
@@ -26,6 +43,9 @@ export default function TextForm(props) {
     </div>
     <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to uppercase</button>
     <button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to Lowercase</button>
+    <button className="btn btn-primary mx-1" onClick={handleClrClick}>Clear Text</button>
+    <button className="btn btn-primary mx-1" onClick={replacecasefunc}>Replace Text</button>
+    <button type="submit" onClick={speak} className="btn btn-warning mx-2 my-2">Speak</button>
 
     </div>
     <div className="container my-4">

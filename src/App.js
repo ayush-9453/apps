@@ -38,17 +38,14 @@ function App() {
       <NavBar title="Mr.Word" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-      <Routes>
-            <Route path="/about" element={<About />} />
-          </Routes>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>}/>
-              </Routes>
+        <Routes>
+          <Route path="/about" element={<About />} />
+         </Routes>
+        <Routes>
+          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>}/>
+        </Routes>
       </div>
-      </BrowserRouter>
+    </BrowserRouter>
     </>
   );
 }

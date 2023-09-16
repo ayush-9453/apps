@@ -2,7 +2,7 @@ print("Hello World") # print statement
 
 
 #Type of variable
-b= true #boolean 
+b= True #boolean 
 c= "as"  #string 
 d = None
 a=1 #variable 

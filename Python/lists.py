@@ -18,3 +18,21 @@ print(fruits.append('kiwi'))
 #t0 sort a list 
 print(fruits.sort())
 
+
+## now stack operations
+
+# stack = [3,4,5]
+# # to push a value
+# stack.append(6)
+# stack.append(7)
+
+# # to pop a value
+# stack.pop(7)
+
+
+# for a list of square numbers
+squares =[]
+for x in range(10):
+    squares.append(x**2)
+
+print(squares)

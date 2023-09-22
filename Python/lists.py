@@ -19,15 +19,15 @@ print(fruits.append('kiwi'))
 print(fruits.sort())
 
 
-## now stack operations
+# now stack operations
 
-# stack = [3,4,5]
-# # to push a value
-# stack.append(6)
-# stack.append(7)
+stack = [3,4,5]
+# to push a value
+stack.append(6)
+stack.append(7)
 
-# # to pop a value
-# stack.pop(7)
+# to pop a value
+stack.pop(7)
 
 
 # for a list of square numbers
@@ -45,16 +45,16 @@ for x in [1,2,3]:
 
 print(combs)
 
-# # for transpose in matrix
-# matrix = [[1,2,3],[4,5,6],[7,8,9]]
-# transposed=[]
-# for i in range(4):
-#     transposed_row =[]
-#     for row in matrix:
-#        transposed_row.append(row[i])
-#     transposed.append(transposed_row)
+# for transpose in matrix
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+transposed=[]
+for i in range(4):
+    transposed_row =[]
+    for row in matrix:
+       transposed_row.append(row[i])
+    transposed.append(transposed_row)
 
-# print(transposed)
+print(transposed)
 
 # for a delete operations
 a = [1 ,-1,3 ,35, 34 ,36,353]

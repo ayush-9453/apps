@@ -30,3 +30,17 @@ print(a.count("@"))
 print(a.endswith("@"))
 # to find a character
 print(a.find("a"))
+
+
+# f-string
+
+letter = "Hey my name is {} and I am from {}"
+country = "India"
+name ="Ayush"
+value = 45.454505 
+print(letter.format(country,name))
+# f-string method
+print(f"Hey my naem is {name} and I am from {country}")
+print(f"{value:.2f} trillion dollars ")
+
+print(type(f"{2*50}"))

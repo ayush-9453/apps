@@ -44,3 +44,11 @@ print(f"Hey my naem is {name} and I am from {country}")
 print(f"{value:.2f} trillion dollars ")
 
 print(type(f"{2*50}"))
+
+# docstring
+# docstring are written just above the body of a function 
+def square(n):
+    '''Take in a number n, returns the square of n'''
+    print(n**2)
+square(5)
+print(square.__doc__)

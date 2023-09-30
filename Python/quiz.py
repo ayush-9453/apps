@@ -7,4 +7,5 @@ answer =['7','12','1','66']
 for i in questions:
     print(i)
     a =  int(input("Enter the answer:"))
-    
+
+print(answer)

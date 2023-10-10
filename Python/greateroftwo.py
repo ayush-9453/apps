@@ -6,6 +6,10 @@ if (a > 18):
 elif(a==18):
     print("you cannot drive")
 
+#short handing
+a =12
+b = 15
+print('A') if a>b else print('=') if a==b else print('B')
 
 # exercise
 

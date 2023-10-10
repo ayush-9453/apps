@@ -53,3 +53,18 @@ def add(*numb):
 
 z = add(1,2,3)
 print(z)
+
+#emulate functions
+marks= [12, 45, 24, 52,73,63]
+
+# index = 0
+# for mark in marks:
+#     print(mark)
+#     if(index ==3):
+#         print("Awesome!")
+#     index +=1
+
+for index,mark in enumerate(marks, start=1):
+    print(mark)
+    if(index ==3):
+        print("Awesome!")

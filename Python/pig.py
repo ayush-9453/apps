@@ -21,6 +21,8 @@ player_score = [ 0 for _ in range(players)]
 
 while max(player_score)< max_score:
     for player_idk in range(players):
+       print("\nPlayer", player_idk+1 ,"turn has just started!\n")
+       print("your total score is :", player_score[player_idk],"\n")
        current_score = 0
 
     while True:

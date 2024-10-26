@@ -13,69 +13,14 @@ data type can be assigned to the variable. for example ( name: str ).
 7. __dict__ command is used to show all the attribute used in a class 
 """
 
-import csv
-
-class Item:
-
-    pay = 0.9
-    all = []
-
-    def __init__(self,name:str,price :int ,quantity = 0 ):
-        # Run validation to the recived argument
-        assert price >= 0 , f"The value of {price} is less than zero!"
-        assert quantity >= 0 , f"The value of quantity {quantity} is less than Zero!"
-
-        # Assign self object
-        self.name =name
-        self.price = price
-        self.quantity = quantity
-        
-        # Append data of each instance in a single array
-        Item.all.append(self)
-
-    def calculate_total(self):
-        return self.price* self.quantity
-    
-    def apply_discount(self):
-        self.price = self.price* self.pay
-    
-    @classmethod
-    def initantiate(cls):
-        with open('item.csv','r') as f:
-            reader = csv.DictReader(f)
-            items = list(reader)
-
-        for item in items:
-            Item(
-                name = item.get('name'),
-                price = float(item.get('price')),
-                quantity = int(item.get('quantity')),
-
-            )
-    @staticmethod
-    def is_integer(num):
-        if isinstance(num,float):
-            return num.is_integer()
-        elif isinstance(num,int):
-            return True
-        else:
-            return False
 
 
-    def __repr__(self) -> str:
-        return f"Item('{self.name}',{self.price},{self.quantity})"
-    
-# print(item1.calculate_total())
-# print(Item.__dict__) # All the attribute on Class level
-# print(item1.__dict__) # All the attribute at instance levelṇ
-# print(Item.pay)
+from item import Item
 
-# item1.apply_discount()
-# print(item1.price)
-# item2 = Item('airpod',100,1)
-# item2.pay = 0.5
-# print(item2.price)
-   
-Item.instantiate()
+item1 = Item("MyItem", 750)
 
-print(Item.all)
+# Setting an Attribute
+item1.name = "OtherItem"
+
+# Getting an Attribute
+print(item1.name)
